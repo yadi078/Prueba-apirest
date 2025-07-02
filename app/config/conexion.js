@@ -3,7 +3,7 @@ const config = require('./configuracion')
 
 module.exports = {
     connection: null,
-    connect: function() {
+    connect: ()=> {
         if(this.connection) return this.connection
         return mongoose.connect(config.DB)
         .then(connection => {
